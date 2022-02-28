@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+html, body{
+  width:100%;
+  height:100%;
+  padding:0px;
+  margin:0px;
+  background-color: black;
+  // background: url('./assets/blackBackground.png');
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-form-field-infix{
+  background-color: #3d3f40 !important;
+  border-radius: 3px !important;
+  height: 1.5rem;
+  padding: 10px;
+}
+
+.mat-form-field-underline {
+  display: none;
+}
+
+.mat-focused .mat-form-field-label {
+  color: white !important;
+ }
+
+.mat-form-field-label{
+  color: white;
+  padding: 0 1rem;
+}
+
+.flex-row{
+  display: flex;
+}
+
+.spacearound{
+  justify-content: space-around;
+}
+
+.mat-chip.mat-standard-chip {
+  cursor: pointer;
+}
+
+.matchip{
+  background-color: black !important;
+  color: white !important;
+
+}
+
+.matchip-selected{
+  background-color: #ff3567 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.mat-standard-chip {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 7px !important;
+  border-top-right-radius: 7px !important;
+  border-bottom-right-radius: 0 !important;
+  border: 1px solid !important;
+  padding: 1rem;
+}
+
+.btn{
+  height: 2.5rem;
+  width: 7rem;
+  color: white;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border: none;
+}
+
+.btn-allowed{
+  background: linear-gradient(#f83062, #e2587a);
+  cursor: pointer;
+}
+
+.btn-normal{
+  background: transparent;
+  border: 1px solid white;
+}
+
+.mat-divider {
+  border-top-color: rgb(255 247 247 / 26%) !important;
+}

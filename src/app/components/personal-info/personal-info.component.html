@@ -1,0 +1,37 @@
+<div class="info-container">
+  <h1>Personal Information</h1>
+  <form>
+    <div class="inputs-container">
+      <mat-form-field appearance="standard">
+        <mat-label>Name</mat-label>
+        <input (input)="handleInputChange()" type="text" matInput [formControl]="nameFormControl" placeholder="Name">
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+          Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Email</mat-label>
+        <input (input)="handleInputChange()" type="email" matInput [formControl]="emailFormControl" placeholder="Email">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="standard">
+        <mat-label>Phone Number</mat-label>
+        <input (input)="handleInputChange()" type="text" matInput [formControl]="phoneFormControl" placeholder="Phone Number">
+        <mat-error *ngIf="phoneFormControl.hasError('pattern') && !phoneFormControl.hasError('required')">
+          Please enter a phone number
+        </mat-error>
+        <mat-error *ngIf="phoneFormControl.hasError('required')">
+          Phone Number is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+
+</div>

@@ -1,0 +1,20 @@
+.subscribe{
+  width: 10rem !important;
+}
+
+.subscribe-container{
+  width: 50vw;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 839px) {
+  .footer-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+}

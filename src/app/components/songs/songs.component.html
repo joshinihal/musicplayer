@@ -1,0 +1,57 @@
+<div>
+  <mat-toolbar class="filter-bar">
+    <span>FILTER BY:</span>
+    <span *ngFor="let filter of filtersList">{{filter}}</span>
+  </mat-toolbar>
+
+  <div class="filter-icon">
+    <span [matMenuTriggerFor]="filters" class="material-icons pointer">
+      tune
+    </span>
+    <mat-menu #filters="matMenu">
+      <button *ngFor="let filter of filtersList" mat-menu-item>{{filter}}</button>
+    </mat-menu>
+  </div>
+
+  <div class="songs-container">
+    <mat-divider></mat-divider>
+    <div *ngFor="let song of songsList">
+      <div class="song-row">
+        <span><span (click)="song.isPlaying?song.pause():song.play()" class="material-icons pointer">
+            {{song.isPlaying ? 'pause' : 'play_arrow'}}
+          </span></span>
+        <span class="title-artist-container">
+          <span>{{song.name}}</span>
+          <span class="song-artist">{{song.artist}}</span>
+        </span>
+        <span>
+          <span class="material-icons pointer">
+            more_vert
+          </span>
+        </span>
+        <div style="width: 20rem;">
+          <div style="width: 100%;">
+            <div [class]="song.name"></div>
+            <div [id]="song.name + 'wave-timeline'"></div>
+          </div>
+        </div>
+        <span>
+          <span>{{song.tags.join(', ')}}</span>
+        </span>
+        <span>
+          <span (click)="song.isLiked = !song.isLiked" class="additional-option material-icons pointer">
+            {{ song.isLiked ? 'favorite' :'favorite_border'}}
+          </span>
+          <span class="additional-option material-icons pointer">
+            add
+          </span>
+          <span class="additional-option material-icons pointer">
+            download_for_offline
+          </span>
+        </span>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+
+</div>

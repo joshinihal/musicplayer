@@ -1,0 +1,12 @@
+
+<div class="info-container">
+  <div class="form-container">
+    <app-personal-info (onInputChange)="handleFormChange($event)" ></app-personal-info>
+  </div>
+  <div class="image-container">
+    <img src="../../../assets/dance.png">
+  </div>
+  <div class="chips-container">
+    <app-select-theme [hasError]="hasError" (onContinue)="handleContinue()" (onThemeSelect)="handleThemeSelect($event)"></app-select-theme>
+  </div>
+</div>

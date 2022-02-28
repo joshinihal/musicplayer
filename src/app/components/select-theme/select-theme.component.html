@@ -1,0 +1,8 @@
+<div class="theme-container">
+  <mat-chip-list aria-label="Theme selection">
+    <mat-chip [ngClass]="theme.isSelected ? 'matchip-selected':'matchip'" [selected]="theme.isSelected" (click)="handleThemeClick(theme)" *ngFor="let theme of themes">{{theme.name}}</mat-chip>
+  </mat-chip-list>
+  <p class="description">Minimum 1 theme needs to be selected and maximum 5</p>
+
+  <button (click)="handleContinue()" [ngClass]="getSelectedCount() && !hasError? 'btn-allowed':'btn-normal'" class="btn" type="button">CONTINUE</button>
+</div>

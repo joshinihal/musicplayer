@@ -1,0 +1,40 @@
+@media screen and (min-width: 840px) {
+  .info-container{
+    margin: 2rem 0;
+    display: grid;
+    justify-items: center;
+    grid-template-areas:
+      "form picture"
+      "chips .";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+  }
+  .form-container{
+    grid-area: form;
+  }
+
+  .image-container{
+    grid-area: picture;
+  }
+
+  .chips-container{
+    grid-area: chips;
+  }
+
+  .logo-container{
+    grid-area: logo;
+  }
+}
+
+@media screen and (max-width: 839px) {
+  .info-container{
+    margin: 2rem 0;
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+
